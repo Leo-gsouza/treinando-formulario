@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Pagina inicial</title>
+</head>
+<body>
+    <header>
+        <h1>Matemática</h1>
+        <p>Calcule varias operações matemáticas em nosso site</p>
+    </header>
+    <nav>
+        <a href="#">Artigos</a>
+        <a href="#">Vídeos</a>
+        <a href="#">Cadastro</a>
+        <a href="#">Quem somos</a>
+    </nav>
+    <main>
+        <section class="normal">
+            <h1>Calculando a formúla de Bhaskara</h1>
+            <p>A fórmula de Bhaskara nos ajuda a resolver qualquer equação do segundo grau. Primeiramente, convertemos a equação para a forma ax²+bx+c=0, na qual a, b e c são coeficientes. Em seguida, inserimos esses coeficientes na fórmula: (-b±√(b²-4ac))/(2a) .</p>
+            <form action="bhaskara.py" method="get">
+                <fieldset>
+                    <legend>Bhaskara</legend>
+                    <p>
+                        <label for="iva">Valor de A: </label>
+                        <input type="number" name="va" id="iva" oninput="bhaskara()"><br>
+                        <label for="ivb">Valor de B: </label>
+                        <input type="number" name="vb" id="ivb" oninput="bhaskara()"><br>
+                        <label for="ivc">Valor de C: </label>
+                        <input type="number" name="vc" id="ivc" oninput="bhaskara()">
+                    </p>
+                    <p>
+                        <label for="idelta">Valor do Delta</label>
+                        <output id="idelta">0</output>
+                    </p>
+                    <p>
+                        <label for="ires1">Valor de X1: </label>
+                        <output id="ires1">0</output>
+                    </p>
+                    <p>
+                        <label for="ires2">Valor de X2</label>
+                        <output id="ires2">0</output>
+                    </p>
+                </fieldset>
+                <h1>Calculando Hipotenusa</h1>
+                <p>A hipotenusa é o lado mais longo de um triângulo retângulo, por ser oposto ao ângulo reto, que define este tipo de triângulo. Em qualquer triângulo retângulo "a soma dos quadrados dos catetos é igual ao quadrado da hipotenusa.</p>
+                <fieldset>
+                    <legend>Hipotenusa</legend>
+                    <p>
+                        <label for="iopo">Cateto Oposto</label>
+                        <input type="number" name="opo" id="iopo" oninput="hipotenusa()">
+                    </p>
+                    <p>
+                        <label for="iadj">Cateto Adjacente</label>
+                        <input type="number" name="adj" id="iadj" oninput="hipotenusa()">
+                    </p>
+                    <p>
+                        <label for="ihip">Hipotenusa = </label>
+                        <output id="ihip">0</output>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function bhaskara(){
+            let a = Number(iva.value)
+            let b = Number(ivb.value)
+            let c = Number(ivc.value)
+            let delta = b**2 -4*a*c
+            let x1 = (-b + (delta**0.5)) / (2*a)
+            let x2 = (-b - (delta**0.5)) / (2*a)
+            ires1.innerHTML = x1
+            ires2.innerHTML = x2
+            idelta.innerHTML = delta
+        }
+
+        function hipotenusa(){
+            ihip.innerHTML = (Number(iopo.value ** 2) + Number(iadj.value**2)) ** 0.5
+        }
+    </script>
+</body>
+</html>
