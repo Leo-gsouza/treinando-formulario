@@ -70,6 +70,10 @@ section.normal h1{
     font-size: 2em;
 }
 
+section.normal h2{
+    font-size: 1em;
+}
+
 section.normal p{
     padding: 10px;
     text-align: justify;
@@ -98,6 +102,11 @@ input{
     font-size: 1.1em;
     text-align: center;
 
+}
+
+form.cadastro input{
+    width: 150px;
+    font-size: 1em;
 }
 
 

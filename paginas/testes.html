@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Testes</title>
+</head>
+<body>
+    <header>
+        <h1>Testes</h1>
+        <p>Provando o seu conhecimento</p>
+    </header>
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="#">Vídeos</a>
+    <a href="#">Cadastro</a>
+    <a href="#">Quem somos</a>
+</nav>
+    <main>
+        <section class="normal">
+            <h1> Teste de Mátematica</h1>
+            <p>A Matemática nos anos iniciais é de suma importância para os alunos, pois, além de servir de suporte para as demais séries, ela desenvolve nos alunos o pensamento lógico, um olhar crítico sobre conceitos construídos, e de desenvolver o que é aprendido com o dia a dia.</p><br>
+            <h2>Formulário do Aluno</h2><br>
+            <form action="cadastro.py" method="post" autocomplete="on" class="cadastro">
+                <p>
+                    <label for="inome">Nome:</label><br>
+                    <input type="text" name="nome" id="inome" placeholder="Nome Completo">
+                </p>
+                <p>
+                    <label for="idia">Data do teste:</label><br>
+                    <input type="date" name="dia" id="idia">
+                </p>
+                <p>
+                    <label for="itel">Telefone:</label><br>
+                    <input type="tel" name="tel" id="itel">
+                </p>
+                <p>
+                    <label for="iemail">Email:</label><br>
+                    <input type="email" name="email" id="iemail">
+                </p>
+            </form>
+            <h2>Teste 1</h2>
+            <form action="teste.py" method="get">
+                <p>Qual a raiz quadrada de 81?</p>
+                <p>
+                    <input type="radio" name="p1" id="ia1"><label for="ia1">8</label><br>
+                    <input type="radio" name="p1" id="ia2"><label for="ia2">12</label><br>
+                    <input type="radio" name="p1" id="ia3"><label for="ia3">9</label>
+                </p>
+    
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>
