@@ -96,7 +96,6 @@ legend{
 }
 
 input{
-    width: 150px;
     margin:5px ;
     padding: 5px;
     font-size: 1.1em;
@@ -104,9 +103,8 @@ input{
 
 }
 
-form.cadastro input{
-    width: 200px;
-    font-size: 1em;
+form.numero input{
+    width: 100px;
 }
 
 
